@@ -1,0 +1,242 @@
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    align-items: center;
+    padding: 10px 0;
+    /* height: 50px; */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    margin-left: 30px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.navbar-list li {
+    margin: 10px 20px;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+/* Media queries for responsive design */
+
+.hero {
+    background: url('./images/img1.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to right,rgb(157, 123, 129), #cad442ec);
+    z-index: 1;
+}
+
+.hero-content {
+    background: rgba(216, 88, 88, 0.467); /* Red transparent box */
+    text-align: left;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    left: 100px;
+    width: 600px;
+    height: 200px;
+}
+
+.hero-title {
+    font-size: 36px;
+    color: #fff;
+    margin-top:20px;
+}
+
+.hero-subtext {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+}
+
+
+
+.menu-section {
+    /* margin-top: 5px; */
+    background: linear-gradient(to right,rgb(157, 123, 129), #cad442ec);  /* Use the same gradient as the hero section */
+    /* padding: 40px 0; */
+    text-align: center;
+}
+
+.section-heading {
+    margin-top: 30px;
+    padding-top: 30px;
+    font-size: 49px;
+    color: #fff;
+}
+
+
+.menu-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+
+.menu-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius:0px 40px; 
+    margin: 30px;
+    width: 300px;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.card-content {
+    padding: 20px;
+
+}
+
+.menu-card img {
+    width: 100%;
+    height: 280px;
+    border-radius:0px 40px 0px 0px ;
+}
+
+.menu-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+
+}
+
+.menu-card p {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.order-button {
+    background: rgb(209, 212, 201);
+    color: #130f0f;
+    border: none;
+    padding: 15px 50px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 35px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-list {
+        display: none;
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .navbar.active .navbar-list {
+        display: flex;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .burger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .hero {
+        height: 70vh; 
+    }
+    .hero-content {
+        left: 10px; 
+        width: calc(100% - 20px); 
+    }
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtext {
+        font-size: 14px;
+    }
+    .menu-card {
+        width: calc(100% - 20px); /* Make menu cards full width on small screens */
+    }
+
+}
